@@ -1,6 +1,5 @@
 // Ruben Del Castillo Fuentes - 48786827D
 // Calculadora
-// Release v1.1.0 - Creación de la rama main v1.1.0
 
 #include <iostream>
 
