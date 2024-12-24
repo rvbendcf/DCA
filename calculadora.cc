@@ -30,6 +30,7 @@ int main(int argc, char** argv){
         case '-': cout << "-- " << num1 << " - " << num2 << " = " << num1 - num2; break;
         case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 * num2; break;
         case '/': cout << "-- " << num1 << " / " << num2 << " = " << num1 / num2; break;
+        default: cout << "Vaya! Parece que esa opción no es válida." << endl; break;
     }
 
     cout << endl;
