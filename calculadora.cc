@@ -28,8 +28,11 @@ int main(int argc, char** argv){
     switch(operand){
         case '+': cout << "-- " << num1 << " + " << num2 << " = " << num1 + num2; break;
         case '-': cout << "-- " << num1 << " - " << num2 << " = " << num1 - num2; break;
-        case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 * num2; break;
-        case '/': cout << "-- " << num1 << " / " << num2 << " = " << num1 / num2; break;
+        case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 / num2; break;
+        case '/':
+            if(num2 != 0) cout << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
+            else cout << "Vaya! Parece que quieres dividir por 0." << endl;
+            break;
         default: cout << "Vaya! Parece que esa opción no es válida." << endl; break;
     }
 
