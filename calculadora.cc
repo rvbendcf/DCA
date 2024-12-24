@@ -24,7 +24,6 @@ int main(int argc, char** argv){
     cout << endl << "-- Que operacion quieres realizar?" << endl;
     cout << "-- Suma (+), Resta (-), Multiplicacion (*) o División (/) o Salir (s)";
     
-    // TODO: Implementar un bucle para que el usuario pueda seguir realizando operaciones
     bool correct = false;
     while(!correct){
         cout << endl << "-- ";
