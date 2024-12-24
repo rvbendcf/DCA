@@ -35,9 +35,9 @@ int main(int argc, char** argv){
         switch(operand){
             case '+': cout << fixed << setprecision(precision) << "-- " << num1 << " + " << num2 << " = " << num1 + num2; correct = true; break;
             case '-': cout << fixed << setprecision(precision) << "-- " << num1 << " - " << num2 << " = " << num1 - num2; correct = true; break;
-            case '*': cout << fixed << setprecision(precision) << "-- " << num1 << " * " << num2 << " = " << num1 / num2; correct = true; break;
+            case '*': cout << fixed << setprecision(precision) << "-- " << num1 << " * " << num2 << " = " << num1 * num2; correct = true; break;
             case '/':
-                if(num2 != 0) cout << fixed << setprecision(precision) << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
+                if(num2 != 0) cout << fixed << setprecision(precision) << "-- " << num1 << " / " << num2 << " = " << num1 / num2; 
                 else cout << "Vaya! Parece que quieres dividir por 0." << endl;
                 correct = true;
                 break;
