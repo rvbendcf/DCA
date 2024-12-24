@@ -2,11 +2,13 @@
 // Calculadora
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int main(int argc, char** argv){
     float num1, num2;
+    int precision;
     char operand;
 
     cout << "-- Bienvenido a calculatron 3000 --" << endl;
@@ -16,9 +18,11 @@ int main(int argc, char** argv){
     cout << "-- 2do numero: ";
     cin >> num2;
 
+    cout << "-- Precisión del resultado: ";
+    cin >> precision;
+
     cout << endl << "-- Que operacion quieres realizar?" << endl;
     cout << "-- Suma (+), Resta (-), Multiplicacion (*) o División (/)";
-
     
     bool correct = false;
     while(!correct){
@@ -29,11 +33,11 @@ int main(int argc, char** argv){
         cout << endl;
 
         switch(operand){
-            case '+': cout << "-- " << num1 << " + " << num2 << " = " << num1 + num2; correct = true; break;
-            case '-': cout << "-- " << num1 << " - " << num2 << " = " << num1 - num2; correct = true; break;
-            case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 / num2; correct = true; break;
+            case '+': cout << fixed << setprecision(precision) << "-- " << num1 << " + " << num2 << " = " << num1 + num2; correct = true; break;
+            case '-': cout << fixed << setprecision(precision) << "-- " << num1 << " - " << num2 << " = " << num1 - num2; correct = true; break;
+            case '*': cout << fixed << setprecision(precision) << "-- " << num1 << " * " << num2 << " = " << num1 / num2; correct = true; break;
             case '/':
-                if(num2 != 0) cout << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
+                if(num2 != 0) cout << fixed << setprecision(precision) << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
                 else cout << "Vaya! Parece que quieres dividir por 0." << endl;
                 correct = true;
                 break;
