@@ -18,21 +18,27 @@ int main(int argc, char** argv){
 
     cout << endl << "-- Que operacion quieres realizar?" << endl;
     cout << "-- Suma (+), Resta (-), Multiplicacion (*) o División (/)";
-    cout << endl << "-- ";
 
-    cin >> operand;
+    
+    bool correct = false;
+    while(!correct){
+        cout << endl << "-- ";
 
-    cout << endl;
+        cin >> operand;
 
-    switch(operand){
-        case '+': cout << "-- " << num1 << " + " << num2 << " = " << num1 + num2; break;
-        case '-': cout << "-- " << num1 << " - " << num2 << " = " << num1 - num2; break;
-        case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 / num2; break;
-        case '/':
-            if(num2 != 0) cout << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
-            else cout << "Vaya! Parece que quieres dividir por 0." << endl;
-            break;
-        default: cout << "Vaya! Parece que esa opción no es válida." << endl; break;
+        cout << endl;
+
+        switch(operand){
+            case '+': cout << "-- " << num1 << " + " << num2 << " = " << num1 + num2; correct = true; break;
+            case '-': cout << "-- " << num1 << " - " << num2 << " = " << num1 - num2; correct = true; break;
+            case '*': cout << "-- " << num1 << " * " << num2 << " = " << num1 / num2; correct = true; break;
+            case '/':
+                if(num2 != 0) cout << "-- " << num1 << " / " << num2 << " = " << num1 * num2; 
+                else cout << "Vaya! Parece que quieres dividir por 0." << endl;
+                correct = true;
+                break;
+            default: cout << "Vaya! Parece que esa opción no es válida." << endl; break;
+        }
     }
 
     cout << endl;
