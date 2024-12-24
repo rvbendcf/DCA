@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char** argv){
-    int num1, num2;
+    float num1, num2;
     char operand;
 
     cout << "-- Bienvenido a calculatron 3000 --" << endl;
