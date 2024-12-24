@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// TODO: Implementa la calculadora con las operaciones básicas (+, -, *, /) y la posibilidad de elegir la precisión del resultado.
 int main(int argc, char** argv){
     float num1, num2;
     int precision;
@@ -32,6 +33,7 @@ int main(int argc, char** argv){
 
         cout << endl;
 
+        // TODO: Implementa las operaciones básicas de la calculadora
         switch(operand){
             case '+': cout << fixed << setprecision(precision) << "-- " << num1 << " + " << num2 << " = " << num1 + num2; correct = true; break;
             case '-': cout << fixed << setprecision(precision) << "-- " << num1 << " - " << num2 << " = " << num1 - num2; correct = true; break;
