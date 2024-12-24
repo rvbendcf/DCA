@@ -22,7 +22,7 @@ int main(int argc, char** argv){
     cin >> precision;
 
     cout << endl << "-- Que operacion quieres realizar?" << endl;
-    cout << "-- Suma (+), Resta (-), Multiplicacion (*) o División (/)";
+    cout << "-- Suma (+), Resta (-), Multiplicacion (*) o División (/) o Salir (s)";
     
     bool correct = false;
     while(!correct){
@@ -41,6 +41,7 @@ int main(int argc, char** argv){
                 else cout << "Vaya! Parece que quieres dividir por 0." << endl;
                 correct = true;
                 break;
+            case 's': correct = true; break;
             default: cout << "Vaya! Parece que esa opción no es válida." << endl; break;
         }
     }
